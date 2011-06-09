@@ -1,4 +1,4 @@
-(ns task1_8
+(ns tasks.chapter1.task1_8
   (:use [clojure.test])
   (:use [clojure.contrib.math :only (abs)]))
 

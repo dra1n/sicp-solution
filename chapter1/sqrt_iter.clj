@@ -1,4 +1,4 @@
-(ns sicp
+(ns chapter1.sqrt_iter
   (:use [clojure.contrib.math :only (abs)]))
 
 (defn square [x] (* x x))
