@@ -6,14 +6,14 @@
 
 (defn fast-expt
   [number power]
-  (loop [a1 1, a2 1, b number, n power]
+  (loop [a 1, b number, n power]
     (cond
       (= 0 n)
-        a2
+        a
       (even? n)
-        (recur (* (square a1) b) a2 b (/ n 2))
+        (recur a (square b) (/ n 2))
       true
-        (recur a1 (* a2 a1 b) b (- n 1)))))
+        (recur (* a b) b (- n 1)))))
 
 ; tests
 (deftest fast-expt-test
