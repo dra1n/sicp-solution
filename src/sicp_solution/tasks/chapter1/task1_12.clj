@@ -1,4 +1,4 @@
-(ns tasks.chapter1.task1_12
+(ns sicp-solution.tasks.chapter1.task1-12
   (:use [clojure.test]))
 
 (defn pascals-triangle [row col]

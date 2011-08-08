@@ -1,4 +1,4 @@
-(ns tasks.chapter1.task1_3
+(ns sicp-solution.tasks.chapter1.task1-3
   (:use [clojure.test]))
 
 (defn sum-of-max

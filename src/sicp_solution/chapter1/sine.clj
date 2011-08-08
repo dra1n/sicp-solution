@@ -1,4 +1,4 @@
-(ns chapter1.sine
+(ns sicp-solution.chapter1.sine
   (:use [clojure.test])
   (:use [clojure.contrib.math :only (abs)]))
 

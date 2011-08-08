@@ -1,4 +1,4 @@
-(ns tasks.chapter1.task1_11
+(ns sicp-solution.tasks.chapter1.task1-11
   (:use [clojure.test]))
 
 (defn f-recur [n]

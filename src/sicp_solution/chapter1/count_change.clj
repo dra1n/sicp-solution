@@ -1,4 +1,4 @@
-(ns chapter1.count_change
+(ns sicp-solution.chapter1.count-change
   (:use [clojure.test])
   (:use [clojure.contrib.math :only (expt)]))
 
