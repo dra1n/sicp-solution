@@ -1,17 +1,17 @@
-(defn square[x] (* x x))
+(ns sicp-solution.test
+  (:use [clojure.contrib.combinatorics :only (cartesian-product)]))
 
-(defn abs
-  [x]
-  (cond
-    (> x 0) x
-    (= x 0) 0
-    (< x 0) (- x)))
+(defn age-combinations
+  [age]
+  (cartesian-product
+   (range 1 age)
+   (range 1 age)
+   (range 1 age)))
 
-(defn p p)
+(defn product-equals?
+  [lst prod]
+  (= (reduce * lst) prod))
 
-(defn test[x y]
-  (if (= x 0)
-    0
-    y))
-
-(test 0 (p))
+(defn print-ages-with-product
+  [prod]
+  (map #(if (product-equals? % prod) (println %)) (age-combinations prod)))
