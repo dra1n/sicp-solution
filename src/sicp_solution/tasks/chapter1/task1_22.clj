@@ -25,10 +25,10 @@
     (timed-prime-test number)))
 
 ;evaluations
-(search-for-primes (range 1000 1020))
-(search-for-primes (range 10000 10038))
-(search-for-primes (range 100000 100045))
-(search-for-primes (range 1000000 1000038))
+;(search-for-primes (range 1000 1020))
+;(search-for-primes (range 10000 10038))
+;(search-for-primes (range 100000 100045))
+;(search-for-primes (range 1000000 1000038))
 
 ; results in seconds
 ; 1009

@@ -15,8 +15,8 @@
           true (recur n (+ test-divisor 1)))))
 
 (defn smallest-divisor
-  [n]
-  (find-divisor n 2))
+  ([n] (find-divisor n 2))             ; want to be able to provide enhanced find-divisor function
+  ([n find-method] (find-method n 2))) ; and reuse this in task 1.23
 
 ;tests
 (deftest smallest-divisor-test
