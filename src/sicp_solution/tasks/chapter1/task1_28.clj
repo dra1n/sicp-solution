@@ -2,18 +2,20 @@
   (:use [sicp-solution.utils :only (square)])
   (:use [clojure.test]))
 
+(defn rem-with-mr-check
+  [number m]
+  (let [reminder (rem (square number) m)]
+    (if (and (not (= number (- m 1)))
+             (not (= number 1))
+             (= reminder 1))
+      0
+      reminder)))
+
 (defn expmod
   [base exp m]
   (cond (= exp 0) 1
-        (even? exp) (rem (square (expmod base (/ exp 2) m)) m)
-        true (rem (* base (expmod base (- exp 1) m)) m)))
-
-(defn miller-rabin-number?
-  [a n]
-  (and (not (or (= a 1)
-                (= a (dec n))))
-       (= (rem (square a) n)
-          1)))
+        (even? exp) (rem-with-mr-check (expmod base (/ exp 2) m) m)
+        :else (rem (* base (expmod base (- exp 1) m)) m)))
 
 (defn miller-rabin-test [n]
   (defn try-it [a]
@@ -27,7 +29,7 @@
         true false))
 
 ;tests
-(deftest fast-prime-test
+(deftest prime-test
   (is (true? (prime? 3 1)))
   (is (true? (prime? 17 10)))
   (is (true? (prime? 199 100)))
@@ -41,3 +43,9 @@
   (is (false? (prime? 1127 10)))
   (is (false? (prime? 299095 10)))
   (is (false? (prime? 19999 10))))
+
+(deftest enhanced-expmod-test
+  (is (zero? (expmod 561 32)))
+  (is (zero? (expmod 1105 32)))
+  (is (zero? (expmod 1729 32)))
+  (is (zero? (expmod 2465 32))))
