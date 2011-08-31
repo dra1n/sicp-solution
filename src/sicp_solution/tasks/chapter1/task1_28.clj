@@ -45,7 +45,7 @@
   (is (false? (prime? 19999 10))))
 
 (deftest enhanced-expmod-test
-  (is (zero? (expmod 561 32)))
-  (is (zero? (expmod 1105 32)))
-  (is (zero? (expmod 1729 32)))
-  (is (zero? (expmod 2465 32))))
+  (is (zero? (expmod 545 560 561)))
+  (is (zero? (expmod 1101 1104 1105)))
+  (is (zero? (expmod 1700 1728 1729)))
+  (is (zero? (expmod 2461 2464 2465))))
