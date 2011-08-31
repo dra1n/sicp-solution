@@ -1,4 +1,4 @@
-(ns sicp-solution.tasks.chapter1.task1-6
+(ns sicp-solution.tasks.chapter1.task1-06
   (:use [clojure.test])
   (:use [clojure.contrib.math :only (abs)]))
 

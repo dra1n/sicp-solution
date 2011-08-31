@@ -1,4 +1,4 @@
-(ns sicp-solution.tasks.chapter1.task1-3
+(ns sicp-solution.tasks.chapter1.task1-03
   (:use [sicp-solution.utils :only (square)])
   (:use [clojure.test]))
 
