@@ -1,0 +1,1 @@
+([:dependencies ([vimclojure/server "2.3.6" :exclusions [org.clojure/clojure]] [org.clojure/clojure "1.4.0"])])
