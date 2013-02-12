@@ -1,6 +1,6 @@
 # Sicp solution
 
-![sicp](http://i.imgur.com/bXWyhrA.jpg)
+![sicp](http://i.imgur.com/qbDqYOU.png)
 
 This is my attempt to solve sicp problems.
 
