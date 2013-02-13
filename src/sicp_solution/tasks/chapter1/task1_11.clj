@@ -15,7 +15,7 @@
 ; tests
 (deftest f-recur-test
   (is (= 1   (f-iter 1)  (f-recur 1)))
-  (is (= 2   (f-iter 1)  (f-recur 1)))
+  (is (= 1   (f-iter 2)  (f-recur 2)))
   (is (= 2   (f-iter 3)  (f-recur 3)))
   (is (= 5   (f-iter 5)  (f-recur 5)))
   (is (= 144 (f-iter 12) (f-recur 12))))
