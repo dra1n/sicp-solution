@@ -1,6 +1,6 @@
 (ns sicp-solution.tasks.chapter1.task1-27
-  (:use [sicp-solution.utils :only (square)])
-  (:use [clojure.test]))
+  (:require [sicp-solution.utils :refer [square]]
+  					[clojure.test]))
 
 (def carmichael-numbers [561 1105 1729 2465 2821 6601])
 
